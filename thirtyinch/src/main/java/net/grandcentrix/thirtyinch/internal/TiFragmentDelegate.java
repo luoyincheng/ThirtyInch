@@ -16,11 +16,11 @@
 package net.grandcentrix.thirtyinch.internal;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
 import java.util.List;
 import net.grandcentrix.thirtyinch.BindViewInterceptor;
 import net.grandcentrix.thirtyinch.Removable;

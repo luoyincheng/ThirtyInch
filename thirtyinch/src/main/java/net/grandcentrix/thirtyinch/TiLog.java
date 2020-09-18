@@ -16,8 +16,8 @@
 package net.grandcentrix.thirtyinch;
 
 
-import androidx.annotation.Nullable;
 import android.util.Log;
+import androidx.annotation.Nullable;
 
 /**
  * Logging class used for all logging of ThirtyInch.

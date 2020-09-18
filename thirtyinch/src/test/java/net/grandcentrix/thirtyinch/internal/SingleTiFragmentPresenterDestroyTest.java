@@ -18,8 +18,8 @@ package net.grandcentrix.thirtyinch.internal;
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
+import androidx.annotation.NonNull;
 import net.grandcentrix.thirtyinch.TiConfiguration;
 import net.grandcentrix.thirtyinch.TiPresenter;
 import net.grandcentrix.thirtyinch.TiView;

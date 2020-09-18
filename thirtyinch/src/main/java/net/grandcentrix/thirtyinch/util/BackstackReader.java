@@ -28,17 +28,6 @@ public class BackstackReader {
     }
 
     /**
-     * Implementation which worked with AndroidX Fragment 1.1.0 and should be working again from 1.2.1:
-     * https://issuetracker.google.com/issues/148189412
-     */
-    private static boolean isInBackStackAndroidXOld(final Fragment fragment) {
-        final StringWriter writer = new StringWriter();
-        fragment.dump("", null, new PrintWriter(writer), null);
-        final String dump = writer.toString();
-        return !dump.contains("mBackStackNesting=0");
-    }
-
-    /**
      * Temporary hack for the hack ;) because in AndroidX Fragment 1.2.0 the original `fragment.dump` hack stopped working:
      * https://github.com/sockeqwe/mosby/issues/318#issuecomment-577660091
      *
@@ -55,5 +44,16 @@ public class BackstackReader {
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * Implementation which worked with AndroidX Fragment 1.1.0 and should be working again from 1.2.1:
+     * https://issuetracker.google.com/issues/148189412
+     */
+    private static boolean isInBackStackAndroidXOld(final Fragment fragment) {
+        final StringWriter writer = new StringWriter();
+        fragment.dump("", null, new PrintWriter(writer), null);
+        final String dump = writer.toString();
+        return !dump.contains("mBackStackNesting=0");
     }
 }

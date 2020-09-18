@@ -16,26 +16,11 @@
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/text_dont_keep_activities"
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            tools:text="@string/dont_keep_activities_enabled" />
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch_retain_presenter_instance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="@string/retain_presenter_instance" />
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch_add_back_stack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="@string/add_transaction_to_back_stack" />
+            android:onClick="addFragmentB"
+            android:text="@string/add_fragment_b" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,12 +43,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="addFragmentB"
-            android:text="@string/add_fragment_b" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,7 +56,6 @@
                 android:text="@string/detach_attach_again" />
 
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,6 +77,28 @@
                 android:text="@string/finish_activity" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_dont_keep_activities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            tools:text="@string/dont_keep_activities_enabled" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_retain_presenter_instance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/retain_presenter_instance" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_add_back_stack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/add_transaction_to_back_stack" />
 
     </LinearLayout>
 

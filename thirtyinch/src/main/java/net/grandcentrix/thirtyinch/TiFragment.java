@@ -16,16 +16,15 @@
 package net.grandcentrix.thirtyinch;
 
 import android.os.Bundle;
-import net.grandcentrix.thirtyinch.util.BackstackReader;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import java.util.List;
 import java.util.concurrent.Executor;
 import net.grandcentrix.thirtyinch.internal.DelegatedTiFragment;
@@ -38,6 +37,7 @@ import net.grandcentrix.thirtyinch.internal.TiPresenterProvider;
 import net.grandcentrix.thirtyinch.internal.TiViewProvider;
 import net.grandcentrix.thirtyinch.internal.UiThreadExecutor;
 import net.grandcentrix.thirtyinch.util.AnnotationUtil;
+import net.grandcentrix.thirtyinch.util.BackstackReader;
 
 /**
  * An Fragment which has a {@link TiPresenter} to build the Model View Presenter architecture on

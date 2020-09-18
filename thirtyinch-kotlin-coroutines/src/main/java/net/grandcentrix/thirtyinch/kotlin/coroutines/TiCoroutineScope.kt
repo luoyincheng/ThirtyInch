@@ -24,15 +24,18 @@ class TiCoroutineScope(
      */
     private val onPresenterDestroyedJob = Job()
     override val coroutineContext: CoroutineContext = context + onPresenterDestroyedJob
+
     /**
      * Parent [Job] for all coroutines that are started while a `view` attached. When this `onPresenterDestroyedJob` gets
      * cancelled (when the view detaches) all of its children jobs will get cancelled too.
      */
     private var onViewDetachJob: Job? = null
+
     /**
      * A [CoroutineContext] that will be used when starting any coroutines via [launchUntilViewDetaches].
      */
     private var onViewDetachCoroutineContext: CoroutineContext? = null
+
     /**
      * The current [TiPresenter.State] of [presenter]. Needs to be kept as [VIEW_DETACHED] is observed first
      * and would instantly cancel all coroutines of this scope.
